@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mongo:5.0.0
+    restart: always
+    container_name: rickandmorty_database
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_DATABASE: rickandmorty
+    volumes:
+      - ./mongo:/data/db
